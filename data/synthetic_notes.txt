@@ -1,0 +1,13 @@
+# Synthetic Singaporean-style clinical notes (mix of abbreviations and code-switching)
+
+Note 1:
+Pt is a 62yo M with hx of DM2, HTN. C/O SOB & CP x2d. On metformin 500mg BD, lisinopril 10mg OD. 
+Plan: admit for NSTEMI workup, CXR, ECG, start LMWH.
+
+Note 2:
+F 45yo, TG with HLD, w/ allergic rhinitis. Reports "feverish" last 3 days, took paracetamol 1g PRN, still has malaise.
+Asked about "kencing manis" family hx. Will order FBS, HbA1c.
+
+Note 3:
+Pt says "tak boleh makan too much spicy, got gastritis" and uses omeprazole 20mg OD prn.
+Also mentions "sakit lutut" after jogging.
