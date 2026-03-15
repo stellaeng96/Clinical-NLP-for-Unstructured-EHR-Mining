@@ -40,7 +40,7 @@ def main():
         note = f.read().strip()
 
     print("\n--- Scanner: Extract entities")
-    ner_pipe = load_ner_pipeline("d4data/biobert_ner_diseases")
+    ner_pipe = load_ner_pipeline()
     entities = extract_entities(note, ner_pipe)
     found = filter_entities(entities)
 

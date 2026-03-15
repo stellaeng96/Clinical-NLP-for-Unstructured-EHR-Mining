@@ -14,7 +14,9 @@ from datetime import datetime
 
 
 def init_db(db_path: str, schema_path: str):
-    os.makedirs(os.path.dirname(db_path), exist_ok=True)
+    db_dir = os.path.dirname(db_path)
+    if db_dir:
+        os.makedirs(db_dir, exist_ok=True)
     conn = sqlite3.connect(db_path)
     with open(schema_path, "r", encoding="utf-8") as f:
         conn.executescript(f.read())

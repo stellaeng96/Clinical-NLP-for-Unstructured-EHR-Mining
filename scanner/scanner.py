@@ -16,17 +16,17 @@ from typing import List, Dict
 from transformers import pipeline, Pipeline
 
 
-DEFAULT_MODEL = "d4data/biobert_ner_diseases"
+DEFAULT_MODEL = "dslim/bert-base-NER"
 FALLBACK_MODEL = "dslim/bert-base-NER"
 
 
-def load_ner_pipeline(model_name: str) -> Pipeline:
+def load_ner_pipeline(model_name: str = DEFAULT_MODEL) -> Pipeline:
     """Load a token-classification pipeline. Falls back to a general NER model if needed."""
     try:
-        return pipeline("ner", model=model_name, grouped_entities=True)
+        return pipeline("ner", model=model_name, aggregation_strategy="simple")
     except Exception as e:
         print(f"⚠️  Could not load model '{model_name}' (maybe offline). Falling back to {FALLBACK_MODEL}.")
-        return pipeline("ner", model=FALLBACK_MODEL, grouped_entities=True)
+        return pipeline("ner", model=FALLBACK_MODEL, aggregation_strategy="simple")
 
 
 def extract_dosages(text: str) -> List[str]:
